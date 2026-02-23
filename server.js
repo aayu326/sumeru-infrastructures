@@ -69,9 +69,10 @@ const KNOWLEDGE_BASE = {
     keywords: [
       'location', 'address', 'where located', 'sumeru location', 'dehradun office',
       'uttarakhand real estate', 'property in dehradun', 'sumeru address',
-      'how to reach', 'directions', 'map', 'office location'
+      'how to reach', 'directions', 'map', 'office location', 'full address',
+      'shimla road', 'badowala', 'saharanpur road', 'majra', 'pin code', 'pincode'
     ],
-    answer: "📍 Sumeru Infrastructures\nDehradun, Uttarakhand, India\n\n🔗 Contact Us: https://www.sumeruinfrastructures.com/contact\n\n📞 For directions and office address, please contact our sales team directly."
+    answer: "📍 Sumeru Infrastructures — Office Addresses:\n\n🏡 Eastern Arc & Sumeru Vihar:\nBadowala Shimla Road,\nDehradun, Uttarakhand – 248007\n\n🏢 Paras Tower Office:\nSaharanpur Rd, Majra,\nDehradun – 248001\n\n📞 Phone: +91-7055-7055-60 / +91-7055-7055-61\n📧 Email: info@sumeruinfrastructures.com\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   reliability: {
@@ -83,39 +84,93 @@ const KNOWLEDGE_BASE = {
     answer: "🏆 Why Trust Sumeru Infrastructures?\n\nSumeru is a trusted developer known for:\n\n✅ Transparent pricing — No hidden charges\n✅ Quality construction standards\n✅ Customer-focused approach\n✅ Legal compliance & clear documentation\n✅ Timely project delivery\n\nYour investment is in safe hands! 🤝\n\n🔗 Learn More: https://www.sumeruinfrastructures.com/"
   },
 
+  phone_number: {
+    keywords: [
+      'phone number', 'contact number', 'call number', 'helpline', 'toll free',
+      'mobile number', 'sumeru phone', 'call sumeru', 'telephone', 'number sumeru'
+    ],
+    answer: "📞 Sumeru Infrastructures — Contact Numbers:\n\n📱 +91-7055-7055-60\n📱 +91-7055-7055-61\n\n📧 Email: info@sumeruinfrastructures.com\n\n🕐 Office Hours: Mon–Sat, 10:00 AM – 6:00 PM\n\n🔗 Or fill enquiry form: https://www.sumeruinfrastructures.com/contact-us"
+  },
+
+  social_media: {
+    keywords: [
+      'social media', 'instagram', 'facebook', 'youtube', 'linkedin', 'twitter',
+      'sumeru instagram', 'sumeru facebook', 'follow sumeru', 'sumeru social',
+      'online presence', 'sumeru youtube', 'sumeru linkedin'
+    ],
+    answer: "📱 Follow Sumeru Infrastructures on Social Media:\n\n📸 Instagram: instagram.com/sumeruinfrastructures\n👍 Facebook: facebook.com/SumeruInfrastructures\n▶️ YouTube: youtube.com/channel/UC6bq46M7kqnKZU77WTxafOQ\n💼 LinkedIn: linkedin.com/company/sumeru-infrastructures\n🐦 Twitter: twitter.com/Sumeru_Infra\n\n🔗 Website: https://www.sumeruinfrastructures.com/"
+  },
+
   // ==============================================
   // PROJECTS
   // ==============================================
   eastern_arc: {
     keywords: [
       'eastern arc', 'eastern arc project', 'doon valley apartments', 'eastern arc flats',
-      'sumeru eastern', 'eastern arc residential', 'eastern arc society'
+      'sumeru eastern', 'eastern arc residential', 'eastern arc society',
+      'eastern arc badowala', '316 units', '3.88 acres', 'eastern arc towers'
     ],
-    answer: "🏡 Eastern Arc — by Sumeru Infrastructures:\n\nEastern Arc is a premium residential apartment project located in the scenic Doon Valley.\n\n🏠 Configurations Available:\n• 1 BHK\n• 2 BHK\n• 3 BHK\n\n✅ Family-Friendly Community\n✅ Gated & Secure Society\n✅ Scenic Valley Views\n✅ Modern Amenities\n✅ Eco-Friendly Design\n\n🔗 View Project: https://www.sumeruinfrastructures.com/eastern-arc"
+    answer: "🏡 Eastern Arc — by Sumeru Infrastructures:\n\nEastern Arc is a modern housing society located at Badowala, Shimla Road, Dehradun.\n\n🏗️ Project Specs:\n• 4 Towers | 4 Floors each\n• 316 Total Units\n• Spread over 3.88 Acres\n• 10,000+ Plants & Trees on-site\n\n🏠 Configurations:\n• 1 BHK & 2 BHK apartments\n• Ready-to-Move units available\n\n✅ Gated & Secure Society\n✅ Scenic Valley Views\n✅ Modern Amenities\n✅ Eco-Friendly Design\n\n🔗 View Project: https://www.sumeruinfrastructures.com/easternarc"
+  },
+
+  eastern_arc_phase1: {
+    keywords: [
+      'eastern arc phase 1', 'phase 1', 'phase i', 'eastern arc phase i',
+      'eastern arc phase one', 'phase 1 project', 'penthouse sumeru',
+      '300 apartments', 'panoramic view apartments'
+    ],
+    answer: "🏡 Eastern Arc Phase I — by Sumeru Infrastructures:\n\nPhase I is a fine blend of affordable and classy living spaces in the Doon Valley.\n\n🏗️ Project Details:\n• 300 Stunning Apartments + Penthouse\n• Spread over 2 Lakh+ Square Feet\n• 70% Open Area\n• 10,000+ Plants | 200+ Species\n• Located on foothills of Himalayas\n\n✅ Panoramic mountain views\n✅ Affordable pricing\n✅ Modern amenities\n✅ High investment returns\n\n🔗 Explore Phase I: https://www.sumeruinfrastructures.com/phase-i"
+  },
+
+  eastern_arc_phase2: {
+    keywords: [
+      'eastern arc phase 2', 'phase 2', 'phase ii', 'eastern arc phase ii',
+      'eastern arc phase two', 'phase 2 project', 'fastest real estate project',
+      'ongoing project', '248171', 'pincode 248171', 'intercom'
+    ],
+    answer: "🏢 Eastern Arc Phase II — by Sumeru Infrastructures:\n\nPhase II is the fast-growing extension of Eastern Arc with modern lifestyle features.\n\n🏗️ Project Details:\n• Spread over 3 Acres\n• Pincode: 248171\n• Fastest ongoing real estate project in Dehradun\n\n🌟 Exclusive Amenities:\n✅ Earthquake Resistant\n✅ Power Backup\n✅ Bank & ATM on premises\n✅ CCTV Camera\n✅ Modular Kitchen\n✅ Intercom Facility\n✅ Visitor & Reserved Parking\n✅ Vastu Compliant\n✅ 24/7 Security\n\n🔗 Explore Phase II: https://www.sumeruinfrastructures.com/phase-ii"
   },
 
   paras_tower: {
     keywords: [
       'paras tower', 'paras tower sumeru', 'dehradun residential tower',
-      'paras apartment complex', 'paras tower housing'
+      'paras apartment complex', 'paras tower housing', 'majra dehradun'
     ],
-    answer: "🏢 Paras Tower — by Sumeru Infrastructures:\n\nParas Tower is a residential development by Sumeru Infrastructures in Dehradun offering modern living spaces.\n\n✅ Prime location in Dehradun\n✅ Modern apartment design\n✅ Quality construction\n✅ Essential amenities included\n\n🔗 View Project: https://www.sumeruinfrastructures.com/paras-tower"
+    answer: "🏢 Paras Tower — by Sumeru Infrastructures:\n\nParas Tower is a residential development in the heart of Dehradun.\n\n📍 Location: Saharanpur Road, Majra, Dehradun – 248001\n\n✅ Prime city location\n✅ Modern apartment design\n✅ Quality construction\n✅ Essential amenities included\n\n🔗 View Project: https://www.sumeruinfrastructures.com/paras-tower"
   },
 
   sumeru_vihar: {
     keywords: [
       'sumeru vihar', 'sumeru vihar project', 'sumeru vihar apartments',
-      'vihar residential', 'sumeru vihar housing'
+      'vihar residential', 'sumeru vihar housing', '161830 sqft', '3.71 acres',
+      'sumeru vihar area', '15040 sqm'
     ],
-    answer: "🌿 Sumeru Vihar — by Sumeru Infrastructures:\n\nSumeru Vihar is a residential project offering modern apartments with scenic surroundings in Dehradun.\n\n✅ Scenic natural surroundings\n✅ Modern apartment design\n✅ Family-friendly environment\n✅ Sustainable development\n\n🔗 View Project: https://www.sumeruinfrastructures.com/sumeru-vihar"
+    answer: "🌿 Sumeru Vihar — by Sumeru Infrastructures:\n\nSumeru Vihar is one of our prestigious properties offering modern apartments with scenic surroundings.\n\n🏗️ Project Size:\n• Covers ~3.71 Acres\n• ~1,61,830 Sq. Ft. | 15,040 Sq. Meters\n\n📍 Location: Badowala Shimla Road, Dehradun – 248007\n\n✅ Scenic natural surroundings\n✅ Modern apartment design\n✅ Family-friendly environment\n✅ Sustainable development\n\n🔗 View Project: https://www.sumeruinfrastructures.com/sumeru-vihar"
+  },
+
+  banjarawala: {
+    keywords: [
+      'banjarawala', 'banjarawala project', 'banjarawala dehradun',
+      'sumeru banjarawala', 'new project sumeru'
+    ],
+    answer: "🏘️ Banjarawala Project — by Sumeru Infrastructures:\n\nBanjarawala is one of our featured residential projects in Dehradun.\n\n✅ Modern residential development\n✅ Quality construction\n✅ Prime Dehradun location\n\n📞 For full details, contact our sales team!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   all_projects: {
     keywords: [
       'projects', 'all projects', 'available projects', 'sumeru projects list',
-      'what projects', 'current projects', 'ongoing projects', 'residential projects'
+      'what projects', 'current projects', 'ongoing projects', 'residential projects',
+      'completed projects', 'upcoming projects'
     ],
-    answer: "🏗️ Our Projects:\n\n🏡 1. Eastern Arc\n• 1BHK, 2BHK, 3BHK apartments\n• Scenic Doon Valley location\n\n🏢 2. Paras Tower\n• Modern residential development\n• Prime Dehradun location\n\n🌿 3. Sumeru Vihar\n• Scenic surroundings\n• Family-friendly community\n\n🔗 All Projects: https://www.sumeruinfrastructures.com/projects"
+    answer: "🏗️ Sumeru Infrastructures — All Projects:\n\n✅ Completed:\n🏡 Eastern Arc Phase I\n🌿 Sumeru Vihar\n\n🔨 Ongoing:\n🏢 Eastern Arc Phase II\n🏢 Paras Tower\n\n🔜 Upcoming Projects:\nNew exciting developments coming soon!\n\n🔗 Completed: https://www.sumeruinfrastructures.com/completed-projects1\n🔗 Ongoing: https://www.sumeruinfrastructures.com/ongoing-projects1\n🔗 Upcoming: https://www.sumeruinfrastructures.com/upcoming-projects1"
+  },
+
+  penthouse: {
+    keywords: [
+      'penthouse', 'penthouse available', 'penthouse sumeru', 'luxury penthouse',
+      'top floor apartment', 'premium unit', 'penthouse eastern arc'
+    ],
+    answer: "🌟 Penthouse at Eastern Arc:\n\nYes! Penthouse units are available in Eastern Arc Phase I:\n\n✅ Premium top-floor unit\n✅ Panoramic views of Doon Valley\n✅ Spacious luxury layout\n✅ High-quality finishes\n✅ Exclusive living experience\n\n📞 Contact us for penthouse availability & pricing!\n\n🔗 Enquire: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   // ==============================================
@@ -127,15 +182,16 @@ const KNOWLEDGE_BASE = {
       'flat sizes', 'housing options', 'apartment configurations', 'what flat',
       'residential apartments', 'affordable flats', 'premium homes', 'housing choices'
     ],
-    answer: "🏠 Apartment Configurations:\n\nSumeru offers multiple apartment options:\n\n📐 1 BHK — Ideal for individuals & couples\n📐 2 BHK — Perfect for small families\n📐 3 BHK — Spacious for larger families\n\n✅ Affordable housing options\n✅ Premium luxury apartments\n✅ Modern layouts & fittings\n✅ Vastu-compliant designs\n\n🔗 View Options: https://www.sumeruinfrastructures.com/apartments"
+    answer: "🏠 Apartment Configurations:\n\nSumeru offers multiple apartment options:\n\n📐 1 BHK — Ideal for individuals & couples\n📐 2 BHK — Perfect for small families\n📐 3 BHK — Spacious for larger families\n🌟 Penthouse — Premium luxury unit (Phase I)\n\n✅ Affordable housing options\n✅ Premium luxury apartments\n✅ Modern layouts & fittings\n✅ Vastu-compliant designs\n\n🔗 View Options: https://www.sumeruinfrastructures.com/easternarc"
   },
 
   spacious_apartments: {
     keywords: [
       'spacious', 'spacious apartments', 'large rooms', 'comfortable layout', 'room space',
-      'modern design apartment', 'apartment layout', 'flat interior space', 'big flat'
+      'modern design apartment', 'apartment layout', 'flat interior space', 'big flat',
+      'open area', '70 percent open', 'green space project'
     ],
-    answer: "🛋️ Spacious Apartments:\n\nAll Sumeru apartments are designed to maximize space and comfort:\n\n✅ Open & airy floor plans\n✅ Proper ventilation & natural lighting\n✅ Modern layouts\n✅ Sufficient storage space\n✅ Thoughtfully designed rooms\n\nComfort and style — perfectly balanced! 🏡"
+    answer: "🛋️ Spacious Apartments:\n\nAll Sumeru apartments are designed to maximize space and comfort:\n\n✅ Open & airy floor plans\n✅ 70%+ open area in Eastern Arc Phase I\n✅ Proper ventilation & natural lighting\n✅ Modern layouts\n✅ Sufficient storage space\n✅ Thoughtfully designed rooms\n\nComfort and style — perfectly balanced! 🏡"
   },
 
   vastu: {
@@ -151,7 +207,7 @@ const KNOWLEDGE_BASE = {
       'modular kitchen', 'modern kitchen', 'kitchen design', 'apartment kitchen',
       'kitchen fittings', 'contemporary kitchen', 'home interiors'
     ],
-    answer: "🍳 Modular Kitchen:\n\nSelect units offer modern modular kitchen layouts featuring:\n\n✅ Contemporary design\n✅ Modern fittings & fixtures\n✅ Efficient use of space\n✅ Durable materials\n\nFor specific availability, please contact our sales team! 📞\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🍳 Modular Kitchen:\n\nYes! Eastern Arc Phase II includes modular kitchen facilities:\n\n✅ Contemporary design\n✅ Modern fittings & fixtures\n✅ Efficient use of space\n✅ Durable materials\n\nFor specific availability by project, please contact our sales team! 📞\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   interior_customization: {
@@ -160,7 +216,23 @@ const KNOWLEDGE_BASE = {
       'home design options', 'apartment modifications', 'tailor interiors', 'design flexibility',
       'interior design assistance', 'flat customization', 'personalized apartment'
     ],
-    answer: "🎨 Interior Customization:\n\nInterior customization options may be available depending on the project phase and agreement.\n\n✅ Personalized layouts\n✅ Design guidance available\n✅ Modern interior options\n\nContact our team to discuss specific customization requirements!\n\n📞 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🎨 Interior Customization:\n\nInterior customization options may be available depending on the project phase and agreement.\n\n✅ Personalized layouts\n✅ Design guidance available\n✅ Modern interior options\n\nContact our team to discuss specific customization requirements!\n\n📞 Contact: https://www.sumeruinfrastructures.com/contact-us"
+  },
+
+  intercom: {
+    keywords: [
+      'intercom', 'intercom facility', 'video doorbell', 'entry phone',
+      'visitor communication', 'door communication', 'intercommunication'
+    ],
+    answer: "📟 Intercom Facility:\n\nYes! Eastern Arc Phase II includes an intercom facility:\n\n✅ Easy communication with visitors\n✅ Enhanced security at entry\n✅ Resident-to-guard communication\n✅ Modern smart living feature\n\nStay connected and secure! 🔒"
+  },
+
+  bank_atm: {
+    keywords: [
+      'bank', 'atm', 'bank atm', 'bank nearby', 'atm nearby', 'cash facility',
+      'banking facility', 'atm in society', 'bank in society', 'financial facility'
+    ],
+    answer: "🏦 Bank & ATM Facility:\n\nEastern Arc Phase II features Bank & ATM facilities on premises:\n\n✅ Convenient banking access\n✅ 24/7 ATM availability\n✅ No need to travel far for cash\n✅ Financial convenience at your doorstep!\n\nEverything you need, right where you live! 💳"
   },
 
   // ==============================================
@@ -171,7 +243,7 @@ const KNOWLEDGE_BASE = {
       'amenities', 'facilities', 'apartment amenities', 'society facilities',
       'what amenities', 'modern amenities', 'residential facilities', 'features'
     ],
-    answer: "🌟 Amenities at Sumeru Projects:\n\n🔒 Security:\n• 24/7 Security personnel\n• CCTV surveillance\n• Gated entry\n\n🌿 Outdoor:\n• Landscaped gardens\n• Children's play area\n• Jogging track\n\n🏋️ Fitness:\n• Gym (select projects)\n• Swimming pool (premium projects)\n\n🏠 Convenience:\n• Dedicated parking\n• Power backup\n• Water backup\n• Regular maintenance\n• Community hall\n\n🔗 Full Details: https://www.sumeruinfrastructures.com/amenities"
+    answer: "🌟 Amenities at Sumeru Projects:\n\n🔒 Security:\n• 24/7 Security personnel\n• CCTV surveillance\n• Gated entry\n• Intercom Facility\n\n🌿 Outdoor:\n• Landscaped gardens\n• Children's play area\n• Jogging track\n• 10,000+ trees & plants\n\n🏋️ Fitness:\n• Gym (select projects)\n• Swimming pool (premium projects)\n\n🏠 Convenience:\n• Dedicated parking\n• Power backup\n• Water backup\n• Bank & ATM on premises\n• Regular maintenance\n• Community hall\n\n🔗 Full Details: https://www.sumeruinfrastructures.com/easternarc"
   },
 
   gym: {
@@ -179,7 +251,7 @@ const KNOWLEDGE_BASE = {
       'gym', 'gymnasium', 'fitness center', 'exercise room', 'workout facility',
       'health amenities', 'resident fitness', 'fitness club'
     ],
-    answer: "🏋️ Gym & Fitness:\n\nSome Sumeru projects include a gym or fitness facility for residents.\n\n✅ Modern equipment\n✅ Spacious workout area\n✅ Health-focused living\n\nFor specific availability per project, contact our team!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🏋️ Gym & Fitness:\n\nSome Sumeru projects include a gym or fitness facility for residents.\n\n✅ Modern equipment\n✅ Spacious workout area\n✅ Health-focused living\n\nFor specific availability per project, contact our team!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   swimming_pool: {
@@ -187,15 +259,16 @@ const KNOWLEDGE_BASE = {
       'swimming pool', 'pool', 'pool facility', 'water leisure', 'recreational amenity',
       'luxury amenities', 'pool in project'
     ],
-    answer: "🏊 Swimming Pool:\n\nCertain premium Sumeru projects offer a swimming pool for residents.\n\n✅ Well-maintained pool\n✅ Recreational facility\n✅ Luxury living experience\n\nFor specific project availability, contact our team!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🏊 Swimming Pool:\n\nCertain premium Sumeru projects offer a swimming pool for residents.\n\n✅ Well-maintained pool\n✅ Recreational facility\n✅ Luxury living experience\n\nFor specific project availability, contact our team!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   parking: {
     keywords: [
       'parking', 'car parking', 'dedicated parking', 'parking facility', 'residential parking',
-      'apartment parking', 'assigned parking', 'secure parking', 'parking space'
+      'apartment parking', 'assigned parking', 'secure parking', 'parking space',
+      'visitor parking', 'reserved parking'
     ],
-    answer: "🚗 Parking Facility:\n\nYes! Each apartment has a dedicated parking space:\n\n✅ Assigned parking per apartment\n✅ Secure parking area\n✅ Easy access\n✅ 24/7 security coverage\n\nNo parking worries for residents! 🅿️"
+    answer: "🚗 Parking Facility:\n\nYes! Each apartment has dedicated parking:\n\n✅ Reserved parking per apartment\n✅ Visitor parking available\n✅ Secure parking area\n✅ Easy access\n✅ 24/7 security coverage\n\nNo parking worries for residents! 🅿️"
   },
 
   power_backup: {
@@ -251,9 +324,10 @@ const KNOWLEDGE_BASE = {
   garden: {
     keywords: [
       'garden', 'landscaped garden', 'green area', 'green space', 'outdoor greenery',
-      'nature surroundings', 'eco friendly area', 'park inside', 'open green space'
+      'nature surroundings', 'eco friendly area', 'park inside', 'open green space',
+      'plants trees', '10000 plants', 'nature project'
     ],
-    answer: "🌿 Landscaped Gardens:\n\n✅ Beautiful landscaped gardens\n✅ Lush green spaces\n✅ Open area for relaxation\n✅ Eco-friendly environment\n✅ Fresh natural surroundings\n\nLive close to nature in the heart of Dehradun! 🌳"
+    answer: "🌿 Landscaped Gardens & Green Spaces:\n\n✅ Beautiful landscaped gardens\n✅ 10,000+ plants & trees on-site\n✅ 200+ species of greenery\n✅ 70% open area (Eastern Arc Phase I)\n✅ Eco-friendly environment\n✅ Fresh natural surroundings\n\nLive close to nature in the heart of Dehradun! 🌳"
   },
 
   children_play: {
@@ -277,7 +351,7 @@ const KNOWLEDGE_BASE = {
       'wifi', 'wi-fi', 'internet', 'broadband', 'wifi connectivity', 'internet facility',
       'online service', 'digital amenities', 'wifi in society'
     ],
-    answer: "📶 Wi-Fi & Internet:\n\nWi-Fi may be available in common areas, and individual broadband connections can be arranged per apartment.\n\n✅ Digital-ready infrastructure\n✅ High-speed internet support\n\nContact our team for specific connectivity details!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "📶 Wi-Fi & Internet:\n\nWi-Fi may be available in common areas, and individual broadband connections can be arranged per apartment.\n\n✅ Digital-ready infrastructure\n✅ High-speed internet support\n\nContact our team for specific connectivity details!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   waste_management: {
@@ -294,7 +368,7 @@ const KNOWLEDGE_BASE = {
       'security measures', '24/7 security', 'security personnel', 'surveillance',
       'protected living', 'controlled access', 'secure apartments', 'safe living'
     ],
-    answer: "🔒 Safety & Security:\n\n✅ 24/7 Security personnel\n✅ CCTV surveillance in common areas\n✅ Gated entry with controlled access\n✅ Secure, private community\n✅ Regular security checks\n\nYour family's safety is our top priority! 🛡️\n\n🔗 Learn More: https://www.sumeruinfrastructures.com/amenities"
+    answer: "🔒 Safety & Security:\n\n✅ 24/7 Security personnel\n✅ CCTV surveillance in common areas\n✅ Gated entry with controlled access\n✅ Intercom Facility\n✅ Secure, private community\n✅ Regular security checks\n\nYour family's safety is our top priority! 🛡️\n\n🔗 Learn More: https://www.sumeruinfrastructures.com/easternarc"
   },
 
   earthquake_safe: {
@@ -346,9 +420,10 @@ const KNOWLEDGE_BASE = {
     keywords: [
       'scenic', 'mountain view', 'valley view', 'nature', 'green surroundings',
       'scenic property', 'nature living', 'beautiful view', 'doon valley', 'hill view',
-      'peaceful location', 'calm area', 'quiet neighborhood', 'peaceful area'
+      'peaceful location', 'calm area', 'quiet neighborhood', 'peaceful area',
+      'himalayan view', 'himalaya', 'foothills'
     ],
-    answer: "🏔️ Scenic Location:\n\nOur projects offer stunning natural surroundings:\n\n🌄 Valley & mountain views\n🌿 Lush green environment\n🌬️ Fresh clean air\n☀️ Natural sunlight\n🏔️ Himalayan backdrop\n\nWake up to breathtaking Dehradun scenery every day! ✨"
+    answer: "🏔️ Scenic Location — Doon Valley:\n\nOur projects offer stunning natural surroundings:\n\n🌄 Panoramic valley & mountain views\n🌿 Lush green forest surroundings\n🌬️ Fresh, clean Himalayan air\n☀️ Natural sunlight all day\n🏔️ Built on the foothills of Himalayas\n\nWake up to breathtaking Dehradun scenery every day! ✨"
   },
 
   dehradun_investment: {
@@ -356,19 +431,28 @@ const KNOWLEDGE_BASE = {
       'dehradun good', 'buy property dehradun', 'uttarakhand real estate', 'dehradun investment',
       'property growth', 'investment location', 'hill city housing', 'dehradun market'
     ],
-    answer: "📈 Why Invest in Dehradun?\n\nDehradun is one of India's fastest-growing cities:\n\n✅ Strong real estate growth potential\n✅ Capital appreciation over time\n✅ Tourism & IT hub development\n✅ Quality of life is excellent\n✅ Government infrastructure investments\n✅ Natural beauty boosts demand\n\nInvest now for long-term returns! 💰\n\n🔗 Explore Projects: https://www.sumeruinfrastructures.com/projects"
+    answer: "📈 Why Invest in Dehradun?\n\nDehradun is one of India's fastest-growing cities:\n\n✅ Strong real estate growth potential\n✅ Capital appreciation over time\n✅ Tourism & IT hub development\n✅ Quality of life is excellent\n✅ Government infrastructure investments\n✅ Natural beauty boosts demand\n\nInvest now for long-term returns! 💰\n\n🔗 Explore Projects: https://www.sumeruinfrastructures.com/projects1"
   },
 
   // ==============================================
-  // INVESTMENT & FINANCIAL
+  // BUY / SELL / RENT
   // ==============================================
   investment: {
     keywords: [
       'investment', 'property investment', 'roi', 'real estate investment',
       'investor support', 'property returns', 'capital appreciation', 'long term investment',
-      'property growth', 'real estate returns', 'good investment'
+      'property growth', 'real estate returns', 'good investment', 'buy property'
     ],
-    answer: "💰 Property Investment with Sumeru:\n\nSumeru provides guidance for property investment:\n\n✅ Strong ROI potential in Dehradun\n✅ Capital appreciation over time\n✅ Guidance for first-time investors\n✅ Transparent dealings\n✅ Legal compliance\n\n📞 Speak with our investment advisor!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "💰 Buy Property with Sumeru:\n\nSumeru provides complete guidance for property buyers:\n\n✅ Strong ROI potential in Dehradun\n✅ Capital appreciation over time\n✅ Guidance for first-time buyers\n✅ Transparent dealings\n✅ Legal compliance\n\n📞 Speak with our investment advisor!\n\n🔗 Buy Now: https://www.sumeruinfrastructures.com/buy"
+  },
+
+  sell_property: {
+    keywords: [
+      'sell', 'sell property', 'sell flat', 'sell apartment', 'sell home', 'selling house',
+      'property resale', 'resell flat', 'sale property', 'help sell', 'sell my flat',
+      'sell real estate', 'property listing'
+    ],
+    answer: "🏷️ Sell Your Property with Sumeru:\n\nYes! Sumeru Infrastructures helps you sell your home too:\n\n✅ Expert guidance for selling\n✅ Successful sale support\n✅ Right pricing advice\n✅ Wide buyer network\n✅ End-to-end selling assistance\n\nNo matter what path you take to sell, we'll help you navigate a successful sale!\n\n🔗 Sell Now: https://www.sumeruinfrastructures.com/sell\n📞 Contact: +91-7055-7055-60"
   },
 
   long_term_investment: {
@@ -384,7 +468,7 @@ const KNOWLEDGE_BASE = {
       'multiple properties', 'multiple units', 'investment portfolio', 'real estate portfolio',
       'buy multiple', 'multiple apartments', 'buying multiple', 'investor multiple'
     ],
-    answer: "🏘️ Multiple Property Investment:\n\nYes! Investors can purchase multiple units:\n\n✅ Portfolio-building opportunities\n✅ Dedicated guidance for investors\n✅ Special assistance for bulk buyers\n✅ Rental income potential\n\n📞 Contact our investment team for customized guidance!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🏘️ Multiple Property Investment:\n\nYes! Investors can purchase multiple units:\n\n✅ Portfolio-building opportunities\n✅ Dedicated guidance for investors\n✅ Special assistance for bulk buyers\n✅ Rental income potential\n\n📞 Contact our investment team for customized guidance!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   nri_investment: {
@@ -392,16 +476,16 @@ const KNOWLEDGE_BASE = {
       'nri', 'nri investment', 'foreign buyer', 'overseas property', 'international investment',
       'nri property', 'overseas buyer', 'nri real estate', 'foreigner invest'
     ],
-    answer: "🌍 NRI Investment:\n\nYes! NRIs can invest in Sumeru projects following Indian property regulations:\n\n✅ FEMA guidelines compliant\n✅ Legal documentation support\n✅ Hassle-free process\n✅ Remote buying assistance\n✅ NRI-friendly services\n\n📞 Dedicated NRI support available!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🌍 NRI Investment:\n\nYes! NRIs can invest in Sumeru projects following Indian property regulations:\n\n✅ FEMA guidelines compliant\n✅ Legal documentation support\n✅ Hassle-free process\n✅ Remote buying assistance\n✅ NRI-friendly services\n\n📞 Dedicated NRI support available!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   rental_property: {
     keywords: [
       'rental', 'rent apartment', 'rental property', 'lease', 'tenant',
       'rental assistance', 'property for rent', 'rental income', 'rental agreement',
-      'leasing assistance', 'rent flat'
+      'leasing assistance', 'rent flat', 'flat on rent', 'property to rent'
     ],
-    answer: "🏠 Rental Property:\n\nYes! Sumeru provides rental property assistance:\n\n✅ Rental property listings\n✅ Rental agreement guidance\n✅ Tenant matching support\n✅ Rental income for investors\n\n📞 Contact us for available rental units!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🏠 Rent a Property with Sumeru:\n\nYes! Sumeru provides rental property assistance:\n\n✅ Rental property listings in Dehradun\n✅ Seamless renting experience\n✅ Rental agreement guidance\n✅ Tenant matching support\n✅ Rental income for investors\n\n📞 Contact us for available rental units!\n\n🔗 Rent: https://www.sumeruinfrastructures.com/rent"
   },
 
   home_loan: {
@@ -410,16 +494,17 @@ const KNOWLEDGE_BASE = {
       'property loan', 'bank finance', 'loan support', 'installment', 'payment plan',
       'flexible payment', 'pay installment', 'emi options'
     ],
-    answer: "🏦 Home Loan & Finance Assistance:\n\nYes! We help with home loan guidance:\n\n✅ Bank loan assistance\n✅ EMI calculation support\n✅ Multiple bank partnerships\n✅ Flexible payment plans\n✅ Quick loan processing guidance\n\n📞 Speak with our finance team!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🏦 Home Loan & Finance Assistance:\n\nYes! We help with home loan guidance:\n\n✅ Bank loan assistance\n✅ EMI calculation support\n✅ Multiple bank partnerships\n✅ Flexible payment plans\n✅ Quick loan processing guidance\n\n📞 Speak with our finance team!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   price: {
     keywords: [
       'price', 'cost', 'rates', 'apartment price', 'flat cost', 'property rates',
       'pricing', 'quotation', 'how much', 'value', 'market rate', 'apartment pricing',
-      'price list', 'property cost clarity', 'transparent price', 'no hidden charges'
+      'price list', 'property cost clarity', 'transparent price', 'no hidden charges',
+      'affordable', 'budget', 'affordable price'
     ],
-    answer: "💰 Pricing & Transparency:\n\nSumeru maintains complete transparency in pricing:\n\n✅ Clear, upfront pricing\n✅ No hidden charges\n✅ Honest property dealings\n✅ Multiple budget options\n\n📞 For updated pricing & availability, contact our sales team!\n\n📱 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "💰 Pricing & Transparency:\n\nSumeru offers properties in varied budget ranges:\n\n✅ Affordable & luxury options both available\n✅ Clear, upfront pricing\n✅ No hidden charges\n✅ Honest property dealings\n✅ Multiple budget options\n\n📞 For updated pricing & availability, contact our sales team!\n\n📱 Contact: https://www.sumeruinfrastructures.com/contact-us\n📞 Phone: +91-7055-7055-60"
   },
 
   // ==============================================
@@ -430,7 +515,7 @@ const KNOWLEDGE_BASE = {
       'book flat', 'book apartment', 'how to book', 'property enquiry', 'contact builder',
       'schedule visit', 'buy apartment', 'purchase flat', 'booking process'
     ],
-    answer: "📝 How to Book a Flat:\n\n✅ Step 1: Contact our sales team\n✅ Step 2: Schedule a site visit\n✅ Step 3: Choose your apartment\n✅ Step 4: Documentation & agreement\n✅ Step 5: Payment & possession\n\n📞 Start your journey today!\n\n🔗 Enquire Now: https://www.sumeruinfrastructures.com/contact"
+    answer: "📝 How to Book a Flat:\n\n✅ Step 1: Contact our sales team\n✅ Step 2: Schedule a site visit\n✅ Step 3: Choose your apartment\n✅ Step 4: Documentation & agreement\n✅ Step 5: Payment & possession\n\n📞 Start your journey today!\n📞 Phone: +91-7055-7055-60\n\n🔗 Enquire Now: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   site_visit: {
@@ -439,7 +524,7 @@ const KNOWLEDGE_BASE = {
       'visit property', 'online appointment', 'schedule appointment', 'see property',
       'virtual scheduling', 'can i visit', 'view apartment'
     ],
-    answer: "🏠 Schedule a Site Visit:\n\nYes! You can schedule a site visit easily:\n\n✅ Visit at your convenience\n✅ Guided property tour\n✅ Meet our sales team\n✅ Online booking available\n\n📞 Call or fill the contact form to book!\n\n🔗 Book Visit: https://www.sumeruinfrastructures.com/contact"
+    answer: "🏠 Schedule a Site Visit:\n\nYes! You can schedule a site visit easily:\n\n✅ Visit at your convenience\n✅ Guided property tour\n✅ Meet our sales team\n✅ Online booking available\n\n📞 Call: +91-7055-7055-60 / 61\n\n🔗 Book Visit: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   documents: {
@@ -447,7 +532,7 @@ const KNOWLEDGE_BASE = {
       'documents', 'property documents', 'kyc', 'required documents', 'legal documents',
       'flat registration', 'home buying paperwork', 'documents required', 'what documents'
     ],
-    answer: "📄 Documents Required for Property Purchase:\n\n• Aadhaar Card & PAN Card\n• Passport-size photographs\n• Address proof\n• Bank statements (for loan)\n• Income proof (for loan)\n• Sale agreement\n\n📞 Our team will guide you through the complete documentation process!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "📄 Documents Required for Property Purchase:\n\n• Aadhaar Card & PAN Card\n• Passport-size photographs\n• Address proof\n• Bank statements (for loan)\n• Income proof (for loan)\n• Sale agreement\n\n📞 Our team will guide you through the complete documentation process!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   legal_assistance: {
@@ -455,7 +540,7 @@ const KNOWLEDGE_BASE = {
       'legal', 'legal assistance', 'legal advice', 'property legal', 'registration',
       'legal documentation', 'legal guidance', 'compliance', 'legal support', 'property law'
     ],
-    answer: "⚖️ Legal Assistance:\n\nYes! Sumeru provides complete legal support for property purchase:\n\n✅ Documentation guidance\n✅ Registration assistance\n✅ Legal compliance support\n✅ Transparent property dealings\n\n📞 Contact us for legal guidance!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "⚖️ Legal Assistance:\n\nYes! Sumeru provides complete legal support for property purchase:\n\n✅ Documentation guidance\n✅ Registration assistance\n✅ Legal compliance support\n✅ Transparent property dealings\n\n📞 Contact us for legal guidance!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   brochure: {
@@ -463,15 +548,25 @@ const KNOWLEDGE_BASE = {
       'brochure', 'project brochure', 'download brochure', 'property details',
       'sumeru brochure', 'apartment info', 'project details', 'pdf brochure'
     ],
-    answer: "📋 Project Brochure:\n\nYes! Brochures are available:\n\n✅ Download from website\n✅ Request via email\n✅ Detailed project information\n✅ Floor plans & layouts included\n\n🔗 Visit: https://www.sumeruinfrastructures.com/projects\n📧 Or email us to request a brochure!"
+    answer: "📋 Project Brochure:\n\nYes! Brochures are available:\n\n✅ Download from website\n✅ Request via email\n✅ Detailed project information\n✅ Floor plans & layouts included\n\n🔗 Visit: https://www.sumeruinfrastructures.com/projects1\n📧 Email: info@sumeruinfrastructures.com\n📞 Phone: +91-7055-7055-60"
+  },
+
+  gallery: {
+    keywords: [
+      'gallery', 'photos', 'images', 'project photos', 'apartment photos',
+      'sumeru gallery', 'pictures', 'view photos', 'see gallery', 'project images',
+      'cinematic gallery', 'property images'
+    ],
+    answer: "📸 Sumeru Gallery:\n\nExplore the cinematic gallery of Sumeru Infrastructures!\n\n✅ Project photos & videos\n✅ Apartment interior visuals\n✅ Society & amenity photos\n✅ Construction progress updates\n\n🔗 View Gallery: https://www.sumeruinfrastructures.com/gallery"
   },
 
   ready_to_move: {
     keywords: [
       'ready to move', 'possession', 'under construction', 'project phase',
-      'housing availability', 'when ready', 'possession status', 'available now'
+      'housing availability', 'when ready', 'possession status', 'available now',
+      'completed project', 'families moved in'
     ],
-    answer: "🔑 Possession Status:\n\nAvailability depends on the project phase.\n\n📞 Contact our sales team for:\n✅ Current project status\n✅ Ready-to-move options\n✅ Under-construction projects\n✅ Expected possession dates\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🔑 Possession Status:\n\n✅ Eastern Arc Phase I — Ready to Move (Families have started moving in!)\n🔨 Eastern Arc Phase II — Ongoing\n🔨 Paras Tower — Ongoing\n\n📞 Contact our sales team for:\n✅ Current unit availability\n✅ Expected possession dates\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us\n📞 Phone: +91-7055-7055-60"
   },
 
   // ==============================================
@@ -506,24 +601,34 @@ const KNOWLEDGE_BASE = {
       'pet', 'pets', 'pet friendly', 'animals allowed', 'pet policy', 'dogs allowed',
       'animal friendly', 'pet accommodation', 'pets in society'
     ],
-    answer: "🐾 Pet-Friendly Apartments:\n\nYes! Pets are typically allowed as per society guidelines:\n\n✅ Pet-friendly community\n✅ Open spaces for pets\n✅ Clear pet policy\n\nContact our team for specific society pet rules!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🐾 Pet-Friendly Apartments:\n\nYes! Pets are typically allowed as per society guidelines:\n\n✅ Pet-friendly community\n✅ Open spaces for pets\n✅ Clear pet policy\n\nContact our team for specific society pet rules!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
   },
 
   eco_friendly: {
     keywords: [
       'eco friendly', 'sustainable', 'green living', 'environment', 'sustainable construction',
       'energy efficient', 'environment conscious', 'green development', 'rainwater harvesting',
-      'eco-friendly apartments', 'green apartments', 'green initiative'
+      'eco-friendly apartments', 'green apartments', 'green initiative', 'sustainable living',
+      'green homes'
     ],
-    answer: "🌱 Eco-Friendly & Sustainable Development:\n\nSumeru emphasizes sustainable and eco-friendly construction:\n\n✅ Energy-efficient designs\n✅ Rainwater harvesting systems\n✅ Landscaped green areas\n✅ Reduced carbon footprint\n✅ Environment-conscious building\n\nLive green. Live well. 🌍\n\n🔗 Learn More: https://www.sumeruinfrastructures.com/"
+    answer: "🌱 Eco-Friendly & Sustainable Development:\n\nSumeru emphasizes sustainable and eco-friendly construction:\n\n✅ Energy-efficient designs\n✅ Rainwater harvesting systems\n✅ 10,000+ trees & plants on-site\n✅ 70%+ open green area\n✅ Reduced carbon footprint\n✅ 200+ species of greenery\n\nLive green. Live well. 🌍\n\n🔗 Learn More: https://www.sumeruinfrastructures.com/"
   },
 
   building_floors: {
     keywords: [
       'floors', 'how many floors', 'building height', 'multi-storey', 'storey',
-      'residential towers', 'floor count', 'building floors'
+      'residential towers', 'floor count', 'building floors', 'towers', 'how many towers'
     ],
-    answer: "🏢 Building Floors:\n\nBuildings vary from 3 to 7 floors depending on the project.\n\n✅ Elevators for all floors\n✅ Scenic views from upper floors\n✅ Well-planned vertical layout\n\nFor specific project details, contact us!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact"
+    answer: "🏢 Building Details:\n\nEastern Arc (Badowala):\n• 4 Towers\n• 4 Floors each\n• 316 Total Units\n\nOther projects vary in height and configuration.\n\n✅ Elevators for all floors\n✅ Scenic views from upper floors\n\nFor specific project details, contact us!\n\n🔗 Contact: https://www.sumeruinfrastructures.com/contact-us"
+  },
+
+  testimonials: {
+    keywords: [
+      'testimonial', 'review', 'customer review', 'feedback', 'client review',
+      'sumeru reviews', 'what people say', 'user experience', 'buyer feedback',
+      'satisfied customers', 'client testimonial', 'happy customers'
+    ],
+    answer: "⭐ What Our Clients Say:\n\n💬 Mayank Rawat:\n\"Thank you, Sumeru Infrastructures for all your hard work in the purchase of our new home, we would highly recommend anyone to contact them to assist them with the purchase or sale of their home.\"\n\n✅ Trusted by many satisfied homebuyers!\n✅ Highly recommended by customers\n\n🔗 Read More: https://www.sumeruinfrastructures.com/"
   },
 
   // ==============================================
@@ -532,9 +637,10 @@ const KNOWLEDGE_BASE = {
   contact: {
     keywords: [
       'contact', 'phone', 'email', 'call', 'reach', 'number', 'customer support',
-      'sales team', 'enquiry', 'query help', 'get in touch', 'how to contact'
+      'sales team', 'enquiry', 'query help', 'get in touch', 'how to contact',
+      'response time', 'when reply', '24 hours'
     ],
-    answer: "📞 Contact Sumeru Infrastructures:\n\n🌐 Website: https://www.sumeruinfrastructures.com/\n📧 Email: info@sumeruinfrastructures.com\n\n🔗 Enquiry Form: https://www.sumeruinfrastructures.com/contact\n\n📅 Office Hours: Mon-Sat, 10:00 AM - 6:00 PM\n\nOur team is always happy to help! 😊"
+    answer: "📞 Contact Sumeru Infrastructures:\n\n📞 Phone: +91-7055-7055-60 / +91-7055-7055-61\n📧 Email: info@sumeruinfrastructures.com\n🌐 Website: https://www.sumeruinfrastructures.com/\n\n📍 Address:\nEastern Arc, Sumeru Vihar, Badowala Shimla Road,\nDehradun, Uttarakhand – 248007\n\n🔗 Enquiry Form: https://www.sumeruinfrastructures.com/contact-us\n\n⏱️ We respond to all enquiries within 24 hours!\n📅 Office Hours: Mon–Sat, 10:00 AM – 6:00 PM"
   },
 
   thanks: {
@@ -542,7 +648,7 @@ const KNOWLEDGE_BASE = {
       'thank you', 'thanks', 'thnx', 'thankyou', 'ok', 'okay', 'okk', 'k',
       'great', 'good', 'nice', 'alright', 'perfect', 'got it'
     ],
-    answer: "😊 You're Welcome!\n\nIt's our pleasure to assist you.\n\nIf you have any more questions about our projects, apartments, amenities, or investment — feel free to ask!\n\n📞 You can also contact us directly for detailed guidance.\n\n🔗 Visit: https://www.sumeruinfrastructures.com/\n\nHave a great day! 🌟"
+    answer: "😊 You're Welcome!\n\nIt's our pleasure to assist you.\n\nIf you have any more questions about our projects, apartments, amenities, or investment — feel free to ask!\n\n📞 You can also contact us directly:\n📞 +91-7055-7055-60\n📧 info@sumeruinfrastructures.com\n\n🔗 Visit: https://www.sumeruinfrastructures.com/\n\nHave a great day! 🌟"
   }
 };
 
@@ -818,7 +924,10 @@ Company Information:
 - Company: Sumeru Infrastructures
 - Location: Dehradun, Uttarakhand, India
 - Website: https://www.sumeruinfrastructures.com/
-- Projects: Eastern Arc, Paras Tower, Sumeru Vihar
+- Phone: +91-7055-7055-60 / +91-7055-7055-61
+- Email: info@sumeruinfrastructures.com
+- Address: Eastern Arc, Sumeru Vihar, Badowala Shimla Road, Dehradun, Uttarakhand – 248007
+- Projects: Eastern Arc Phase I (Ready to Move), Eastern Arc Phase II (Ongoing), Paras Tower, Sumeru Vihar, Banjarawala
 
 Guidelines:
 - Answer ONLY questions about Sumeru Infrastructures and their properties
@@ -1009,7 +1118,7 @@ app.post('/api/chat', async (req, res) => {
     console.error('❌ Error:', error.message);
     res.json({
       success: true,
-      reply: `I can help you with Sumeru Infrastructures information! 😊\n\nFor detailed assistance:\n🌐 Website: https://www.sumeruinfrastructures.com/\n📧 Email: info@sumeruinfrastructures.com`,
+      reply: `I can help you with Sumeru Infrastructures information! 😊\n\nFor detailed assistance:\n📞 Phone: +91-7055-7055-60\n🌐 Website: https://www.sumeruinfrastructures.com/\n📧 Email: info@sumeruinfrastructures.com`,
       mode: 'emergency-fallback'
     });
   }
@@ -1028,7 +1137,8 @@ app.listen(PORT, () => {
   console.log(`📚 Knowledge Base: ${Object.keys(KNOWLEDGE_BASE).length} topics ✅`);
   console.log(`📧 Email: ${EMAIL_CONFIG.auth.user !== 'your-email@gmail.com' ? 'Configured ✅' : 'Not Configured ❌'}`);
   console.log(`📞 Callback System: Active ✅`);
-  console.log(`🏡 Projects: Eastern Arc, Paras Tower, Sumeru Vihar`);
+  console.log(`📞 Phone: +91-7055-7055-60 / 61`);
+  console.log(`🏡 Projects: Eastern Arc Phase I & II, Paras Tower, Sumeru Vihar, Banjarawala`);
   console.log('╚════════════════════════════════════════════════\n');
 
   if (!GEMINI_API_KEY) {
