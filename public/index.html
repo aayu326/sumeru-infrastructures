@@ -90,12 +90,24 @@
             animation: headerShine 3s ease-in-out infinite;
         }
         @keyframes headerShine { 0%,100%{transform:translate(-50%,-50%);} 50%{transform:translate(0%,0%);} }
+
+        /* ── Logo Avatar ── */
         .chat-header-avatar {
-            width: 44px; height: 44px; border-radius: 50%; background: white;
-            display: flex; align-items: center; justify-content: center; font-size: 22px;
-            flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            border: 3px solid rgba(196,127,42,0.5); position: relative; z-index: 1;
+            width: 48px; height: 48px; border-radius: 50%; background: white;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+            border: 2.5px solid rgba(196,127,42,0.7); position: relative; z-index: 1;
+            overflow: hidden; padding: 5px;
         }
+        .chat-header-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            border-radius: 0;
+            filter: none;
+        }
+
         .chat-header-info { flex: 1; position: relative; z-index: 1; min-width: 0; }
         .chat-header-info h3 { font-size: 14px; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .chat-header-info p  { font-size: 11px; opacity: 0.9; display: flex; align-items: center; gap: 5px; }
@@ -120,7 +132,17 @@
             background: linear-gradient(135deg, #1a4a2e 0%, #0d2d1a 100%);
             color: white; padding: 22px 20px; text-align: center; flex-shrink: 0; position: relative; overflow: hidden;
         }
-        .registration-header::before { content:'🏢'; position:absolute; font-size:80px; opacity:0.1; top:50%; left:50%; transform:translate(-50%,-50%) rotate(-15deg); }
+        .registration-header .reg-logo-wrap {
+            width: 72px; height: 72px; border-radius: 50%; background: white;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 12px auto; padding: 8px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            border: 2.5px solid rgba(196,127,42,0.7);
+            overflow: hidden;
+        }
+        .registration-header .reg-logo-wrap img {
+            width: 100%; height: 100%; object-fit: contain; display: block;
+        }
         .registration-header h2 { font-size: 19px; margin-bottom: 6px; position: relative; z-index: 1; }
         .registration-header p  { font-size: 13px; opacity: 0.9; position: relative; z-index: 1; }
         .registration-form { flex: 1; padding: 22px; overflow-y: auto; background: linear-gradient(to bottom,#fafafa,#fff); }
@@ -215,7 +237,15 @@
     <!-- Registration Overlay -->
     <div class="registration-overlay" id="registrationOverlay">
         <div class="registration-header">
-            <h2>🏢 Welcome to Sumeru Infrastructures!</h2>
+            <!-- Logo in circle for registration screen -->
+            <div class="reg-logo-wrap">
+                <img
+                    src="https://static.wixstatic.com/media/b69fe8_eb049ae6a1e84041b980c0b83f750f26~mv2.png/v1/fill/w_574,h_212,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_PNG.png"
+                    alt="Sumeru Infrastructures Logo"
+                    onerror="this.parentElement.innerHTML='🏢'"
+                >
+            </div>
+            <h2>Welcome to Sumeru Infrastructures!</h2>
             <p>Please share your details to start chatting</p>
         </div>
         <div class="registration-form">
@@ -243,7 +273,14 @@
 
     <!-- Chat Header -->
     <div class="chat-header">
-        <div class="chat-header-avatar">🏢</div>
+        <!-- Circular logo avatar -->
+        <div class="chat-header-avatar">
+            <img
+                src="https://static.wixstatic.com/media/b69fe8_eb049ae6a1e84041b980c0b83f750f26~mv2.png/v1/fill/w_574,h_212,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_PNG.png"
+                alt="Sumeru Infrastructures"
+                onerror="this.parentElement.innerHTML='🏢'; this.parentElement.style.fontSize='22px';"
+            >
+        </div>
         <div class="chat-header-info">
             <h3>Sumeru Infrastructures</h3>
             <p><span class="status-dot"></span><span>Online • Ready to help</span></p>
@@ -489,7 +526,6 @@ async function sendMessage() {
     const message = userInput.value.trim();
     if (!message || isProcessing) return;
 
-    // Waiting for callback phone number
     if (waitingForCallback) {
         if (validateCallbackPhone(message)) {
             addMessage(message, 'user');
