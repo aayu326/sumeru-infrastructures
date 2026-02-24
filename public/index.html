@@ -99,14 +99,7 @@
             border: 2.5px solid rgba(196,127,42,0.7); position: relative; z-index: 1;
             overflow: hidden; padding: 5px;
         }
-        .chat-header-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            display: block;
-            border-radius: 0;
-            filter: none;
-        }
+        .chat-header-avatar img { width: 100%; height: 100%; object-fit: contain; display: block; border-radius: 0; filter: none; }
 
         .chat-header-info { flex: 1; position: relative; z-index: 1; min-width: 0; }
         .chat-header-info h3 { font-size: 14px; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -137,12 +130,9 @@
             display: flex; align-items: center; justify-content: center;
             margin: 0 auto 12px auto; padding: 8px;
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-            border: 2.5px solid rgba(196,127,42,0.7);
-            overflow: hidden;
+            border: 2.5px solid rgba(196,127,42,0.7); overflow: hidden;
         }
-        .registration-header .reg-logo-wrap img {
-            width: 100%; height: 100%; object-fit: contain; display: block;
-        }
+        .registration-header .reg-logo-wrap img { width: 100%; height: 100%; object-fit: contain; display: block; }
         .registration-header h2 { font-size: 19px; margin-bottom: 6px; position: relative; z-index: 1; }
         .registration-header p  { font-size: 13px; opacity: 0.9; position: relative; z-index: 1; }
         .registration-form { flex: 1; padding: 22px; overflow-y: auto; background: linear-gradient(to bottom,#fafafa,#fff); }
@@ -208,11 +198,85 @@
         .typing-indicator span:nth-child(3) { animation-delay: 0.4s; margin-right: 0; }
         @keyframes typing { 0%,60%,100%{transform:translateY(0);opacity:0.7;} 30%{transform:translateY(-10px);opacity:1;} }
 
+        /* ══════════════════════════════════════
+           ROI CALCULATOR MODAL
+        ══════════════════════════════════════ */
+        .roi-modal {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: white; z-index: 20;
+            display: none; flex-direction: column; overflow: hidden;
+            animation: slideUpScale 0.35s cubic-bezier(0.34,1.56,0.64,1);
+        }
+        .roi-modal.active { display: flex; }
+        .roi-modal-header {
+            background: linear-gradient(135deg, #1a4a2e 0%, #0d2d1a 100%);
+            color: white; padding: 14px 16px;
+            display: flex; align-items: center; gap: 10px; flex-shrink: 0;
+        }
+        .roi-modal-header .roi-back-btn {
+            background: rgba(255,255,255,0.15); border: none; color: white;
+            width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px; transition: all 0.2s; flex-shrink: 0;
+        }
+        .roi-modal-header .roi-back-btn:hover { background: rgba(255,255,255,0.3); }
+        .roi-modal-header h3 { font-size: 15px; font-weight: 700; }
+        .roi-modal-header p  { font-size: 11px; opacity: 0.85; margin-top: 2px; }
+        .roi-modal-body { flex: 1; overflow-y: auto; padding: 18px 16px; background: #f8f9fa; }
+        .roi-modal-body::-webkit-scrollbar { width: 5px; }
+        .roi-modal-body::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+        .roi-section { background: white; border-radius: 14px; padding: 16px; margin-bottom: 14px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; }
+        .roi-section h4 { font-size: 13px; font-weight: 700; color: #1a4a2e; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e8f4ee; display: flex; align-items: center; gap: 6px; }
+        .roi-field { margin-bottom: 14px; }
+        .roi-field:last-child { margin-bottom: 0; }
+        .roi-field label { display: block; font-size: 13px; font-weight: 600; color: #444; margin-bottom: 8px; }
+        .roi-input-wrap { position: relative; display: flex; align-items: center; }
+        .roi-input-wrap .prefix { position: absolute; left: 14px; font-size: 15px; font-weight: 700; color: #1a4a2e; z-index: 1; }
+        .roi-input-wrap input[type="number"] {
+            width: 100%; padding: 11px 14px 11px 32px;
+            border: 2px solid #e5e5e5; border-radius: 10px;
+            font-size: 15px; font-weight: 600; color: #222;
+            outline: none; transition: all 0.3s; background: #fafafa;
+            -moz-appearance: textfield;
+        }
+        .roi-input-wrap input[type="number"]::-webkit-outer-spin-button,
+        .roi-input-wrap input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+        .roi-input-wrap input[type="number"]:focus { border-color: #1a4a2e; background: white; box-shadow: 0 0 0 3px rgba(26,74,46,0.1); }
+        .roi-slider-wrap { display: flex; align-items: center; gap: 10px; }
+        .roi-slider { flex: 1; -webkit-appearance: none; height: 6px; border-radius: 10px; background: #e0e0e0; outline: none; cursor: pointer; }
+        .roi-slider::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg,#1a4a2e,#0d2d1a); cursor: pointer; box-shadow: 0 2px 8px rgba(26,74,46,0.4); border: 3px solid white; }
+        .roi-slider::-moz-range-thumb { width: 22px; height: 22px; border-radius: 50%; background: linear-gradient(135deg,#1a4a2e,#0d2d1a); cursor: pointer; border: 3px solid white; }
+        .roi-slider-value { min-width: 58px; text-align: center; padding: 6px 10px; background: #1a4a2e; color: white; border-radius: 8px; font-size: 13px; font-weight: 700; }
+        .roi-results { background: white; border-radius: 14px; padding: 16px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); border: 1px solid #f0f0f0; }
+        .roi-results h4 { font-size: 13px; font-weight: 700; color: #1a4a2e; margin-bottom: 14px; padding-bottom: 8px; border-bottom: 2px solid #e8f4ee; display: flex; align-items: center; gap: 6px; }
+        .roi-result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .roi-result-card { background: linear-gradient(135deg, #f0f7f3, #e8f4ee); border-radius: 12px; padding: 14px 12px; text-align: center; border: 1px solid #c8e6d4; }
+        .roi-result-card.full { grid-column: 1 / -1; background: linear-gradient(135deg, #1a4a2e, #0d2d1a); color: white; border: none; }
+        .roi-result-card .result-label { font-size: 11px; color: #666; font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .roi-result-card.full .result-label { color: rgba(255,255,255,0.8); }
+        .roi-result-card .result-value { font-size: 20px; font-weight: 800; color: #1a4a2e; }
+        .roi-result-card.full .result-value { font-size: 24px; color: #7dda9e; }
+        .roi-result-card .result-value.negative { color: #e53e3e; }
+        .roi-calc-btn {
+            width: 100%; padding: 13px; margin-top: 14px;
+            background: linear-gradient(135deg, #c47f2a, #a06520);
+            color: white; border: none; border-radius: 12px;
+            font-size: 15px; font-weight: 700; cursor: pointer;
+            transition: all 0.3s; box-shadow: 0 4px 15px rgba(196,127,42,0.4);
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+        }
+        .roi-calc-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(196,127,42,0.5); }
+        .roi-cta { margin-top: 14px; padding: 13px; background: linear-gradient(135deg,#f0f7f3,#e8f4ee); border-radius: 12px; border: 1px solid #c8e6d4; text-align: center; }
+        .roi-cta p { font-size: 13px; color: #444; margin-bottom: 10px; font-weight: 600; }
+        .roi-cta button { padding: 9px 20px; background: linear-gradient(135deg,#1a4a2e,#0d2d1a); color: white; border: none; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .roi-cta button:hover { transform: translateY(-1px); }
+
         /* ── Mobile ── */
         @media (max-width: 768px) {
             .chat-container { bottom:0;right:0;left:0;top:0;width:100%;height:100%;border-radius:0;max-height:100vh; }
             .chat-bubble { bottom:95px;right:15px;max-width:220px;font-size:13px; }
             .chat-toggle { bottom:15px;right:15px;width:60px;height:60px; }
+            .roi-result-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -237,13 +301,8 @@
     <!-- Registration Overlay -->
     <div class="registration-overlay" id="registrationOverlay">
         <div class="registration-header">
-            <!-- Logo in circle for registration screen -->
             <div class="reg-logo-wrap">
-                <img
-                    src="https://static.wixstatic.com/media/b69fe8_eb049ae6a1e84041b980c0b83f750f26~mv2.png/v1/fill/w_574,h_212,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_PNG.png"
-                    alt="Sumeru Infrastructures Logo"
-                    onerror="this.parentElement.innerHTML='🏢'"
-                >
+                <img src="https://static.wixstatic.com/media/b69fe8_eb049ae6a1e84041b980c0b83f750f26~mv2.png/v1/fill/w_574,h_212,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_PNG.png" alt="Sumeru Infrastructures Logo" onerror="this.parentElement.innerHTML='🏢'">
             </div>
             <h2>Welcome to Sumeru Infrastructures!</h2>
             <p>Please share your details to start chatting</p>
@@ -271,15 +330,73 @@
         </div>
     </div>
 
+    <!-- ══ ROI CALCULATOR MODAL ══ -->
+    <div class="roi-modal" id="roiModal">
+        <div class="roi-modal-header">
+            <button class="roi-back-btn" id="roiBackBtn">←</button>
+            <div>
+                <h3>💹 ROI Calculator</h3>
+                <p>Return on Investment Calculator</p>
+            </div>
+        </div>
+        <div class="roi-modal-body">
+            <div class="roi-section">
+                <h4>📥 Investment Details</h4>
+                <div class="roi-field">
+                    <label>Amount Invested</label>
+                    <div class="roi-input-wrap">
+                        <span class="prefix">₹</span>
+                        <input type="number" id="roiInvested" placeholder="0" value="2500000" min="0">
+                    </div>
+                </div>
+                <div class="roi-field">
+                    <label>Amount Returned (Expected)</label>
+                    <div class="roi-input-wrap">
+                        <span class="prefix">₹</span>
+                        <input type="number" id="roiReturned" placeholder="0" value="3000000" min="0">
+                    </div>
+                </div>
+                <div class="roi-field">
+                    <label>Investment Period</label>
+                    <div class="roi-slider-wrap">
+                        <input type="range" class="roi-slider" id="roiYears" min="1" max="30" value="3">
+                        <div class="roi-slider-value" id="roiYearsDisplay">3 Yrs</div>
+                    </div>
+                </div>
+            </div>
+            <button class="roi-calc-btn" id="roiCalcBtn">📊 Calculate ROI</button>
+            <div class="roi-results" id="roiResults" style="margin-top:14px; display:none;">
+                <h4>📈 Your Returns</h4>
+                <div class="roi-result-grid">
+                    <div class="roi-result-card full">
+                        <div class="result-label">Total Gain on Investment</div>
+                        <div class="result-value" id="resGain">₹ 0</div>
+                    </div>
+                    <div class="roi-result-card">
+                        <div class="result-label">Return on Investment (ROI)</div>
+                        <div class="result-value" id="resROI">0%</div>
+                    </div>
+                    <div class="roi-result-card">
+                        <div class="result-label">Simple Annual ROI</div>
+                        <div class="result-value" id="resSimple">0%</div>
+                    </div>
+                    <div class="roi-result-card full" style="background:linear-gradient(135deg,#f0f7f3,#e8f4ee);border:1px solid #c8e6d4;">
+                        <div class="result-label" style="color:#666;">Compound Annual Growth Rate (CAGR)</div>
+                        <div class="result-value" id="resCAGR" style="color:#1a4a2e;font-size:22px;">0%</div>
+                    </div>
+                </div>
+                <div class="roi-cta">
+                    <p>🏡 Interested in investing with Sumeru?</p>
+                    <button onclick="closeROIandContact()">📞 Talk to Our Expert</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Chat Header -->
     <div class="chat-header">
-        <!-- Circular logo avatar -->
         <div class="chat-header-avatar">
-            <img
-                src="https://static.wixstatic.com/media/b69fe8_eb049ae6a1e84041b980c0b83f750f26~mv2.png/v1/fill/w_574,h_212,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_PNG.png"
-                alt="Sumeru Infrastructures"
-                onerror="this.parentElement.innerHTML='🏢'; this.parentElement.style.fontSize='22px';"
-            >
+            <img src="https://static.wixstatic.com/media/b69fe8_eb049ae6a1e84041b980c0b83f750f26~mv2.png/v1/fill/w_574,h_212,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/logo_PNG.png" alt="Sumeru Infrastructures" onerror="this.parentElement.innerHTML='🏢'; this.parentElement.style.fontSize='22px';">
         </div>
         <div class="chat-header-info">
             <h3>Sumeru Infrastructures</h3>
@@ -305,6 +422,7 @@
         <button class="quick-reply-btn" data-reply="Tell me about Sumeru Vihar">🌿 Sumeru Vihar</button>
         <button class="quick-reply-btn" data-reply="apartment types and configurations">🏠 Apartments</button>
         <button class="quick-reply-btn" data-reply="amenities in the project">✨ Amenities</button>
+        <button class="quick-reply-btn roi-trigger-btn">💹 ROI Calculator</button>
         <button class="quick-reply-btn" data-reply="property investment">💰 Investment</button>
         <button class="quick-reply-btn" data-reply="How can I contact you?">📞 Contact</button>
     </div>
@@ -344,6 +462,7 @@ const backToMenuBtn       = document.getElementById('backToMenuBtn');
 const userNameEl          = document.getElementById('userName');
 const userEmailEl         = document.getElementById('userEmail');
 const userPhoneEl         = document.getElementById('userPhone');
+const roiModal            = document.getElementById('roiModal');
 
 // ══════════════════════════════════════════
 // STATE
@@ -368,6 +487,71 @@ function validateCallbackPhone(phone) {
     const c = phone.replace(/\D/g,'');
     return c.length === 10 && /^[6-9]\d{9}$/.test(c);
 }
+
+// ══════════════════════════════════════════
+// ROI CALCULATOR
+// ══════════════════════════════════════════
+const roiYearsSlider  = document.getElementById('roiYears');
+const roiYearsDisplay = document.getElementById('roiYearsDisplay');
+
+roiYearsSlider.addEventListener('input', () => {
+    roiYearsDisplay.textContent = roiYearsSlider.value + ' Yrs';
+    const pct = ((roiYearsSlider.value - roiYearsSlider.min) / (roiYearsSlider.max - roiYearsSlider.min)) * 100;
+    roiYearsSlider.style.background = `linear-gradient(to right, #1a4a2e ${pct}%, #e0e0e0 ${pct}%)`;
+});
+roiYearsSlider.dispatchEvent(new Event('input'));
+
+document.getElementById('roiCalcBtn').addEventListener('click', calculateROI);
+
+function formatINR(num) {
+    if (num >= 10000000) return '₹ ' + (num/10000000).toFixed(2) + ' Cr';
+    if (num >= 100000)   return '₹ ' + (num/100000).toFixed(2) + ' L';
+    return '₹ ' + num.toLocaleString('en-IN');
+}
+
+function calculateROI() {
+    const invested = parseFloat(document.getElementById('roiInvested').value) || 0;
+    const returned = parseFloat(document.getElementById('roiReturned').value) || 0;
+    const years    = parseFloat(roiYearsSlider.value) || 1;
+
+    if (invested <= 0) {
+        document.getElementById('roiInvested').style.borderColor = '#c47f2a';
+        setTimeout(() => document.getElementById('roiInvested').style.borderColor = '', 1500);
+        return;
+    }
+
+    const gain      = returned - invested;
+    const roi       = (gain / invested) * 100;
+    const simpleAnn = roi / years;
+    const cagr      = (Math.pow(returned / invested, 1 / years) - 1) * 100;
+    const isNeg     = gain < 0;
+
+    document.getElementById('resGain').textContent   = formatINR(Math.abs(gain)) + (isNeg ? ' 📉' : ' 📈');
+    document.getElementById('resGain').className     = 'result-value' + (isNeg ? ' negative' : '');
+    document.getElementById('resROI').textContent    = roi.toFixed(2) + '%';
+    document.getElementById('resROI').className      = 'result-value' + (isNeg ? ' negative' : '');
+    document.getElementById('resSimple').textContent = simpleAnn.toFixed(2) + '%';
+    document.getElementById('resSimple').className   = 'result-value' + (isNeg ? ' negative' : '');
+    document.getElementById('resCAGR').textContent   = (isNaN(cagr) ? '0' : cagr.toFixed(2)) + '%';
+    document.getElementById('resCAGR').className     = 'result-value' + (isNeg ? ' negative' : '');
+
+    const results = document.getElementById('roiResults');
+    results.style.display = 'block';
+    results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function openROI() {
+    roiModal.classList.add('active');
+    document.getElementById('roiResults').style.display = 'none';
+}
+function closeROI() { roiModal.classList.remove('active'); }
+function closeROIandContact() {
+    closeROI();
+    userInput.value = 'How can I contact you?';
+    sendMessage();
+}
+
+document.getElementById('roiBackBtn').addEventListener('click', closeROI);
 
 // ══════════════════════════════════════════
 // CALLBACK HANDLER
@@ -412,6 +596,7 @@ function showDefaultQuickReplies() {
         <button class="quick-reply-btn" data-reply="Tell me about Sumeru Vihar">🌿 Sumeru Vihar</button>
         <button class="quick-reply-btn" data-reply="apartment types and configurations">🏠 Apartments</button>
         <button class="quick-reply-btn" data-reply="amenities in the project">✨ Amenities</button>
+        <button class="quick-reply-btn roi-trigger-btn">💹 ROI Calculator</button>
         <button class="quick-reply-btn" data-reply="property investment">💰 Investment</button>
         <button class="quick-reply-btn" data-reply="How can I contact you?">📞 Contact</button>
     `;
@@ -451,73 +636,39 @@ chatToggle.addEventListener('click', () => {
 // ══════════════════════════════════════════
 userDetailsForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-
     document.querySelectorAll('.error-message').forEach(el => el.classList.remove('show'));
     document.querySelectorAll('input').forEach(el => el.classList.remove('error'));
-
     const name  = userNameEl.value.trim();
     const email = userEmailEl.value.trim();
     const phone = userPhoneEl.value.trim();
     let hasError = false;
-
-    if (!name) {
-        userNameEl.classList.add('error');
-        const el = document.getElementById('nameError');
-        el.textContent = 'Please enter your name'; el.classList.add('show');
-        hasError = true;
-    }
-    if (!email || !validateEmail(email)) {
-        userEmailEl.classList.add('error');
-        const el = document.getElementById('emailError');
-        el.textContent = !email ? 'Please enter your email' : 'Please enter a valid email'; el.classList.add('show');
-        hasError = true;
-    }
-    if (!phone || !validatePhone(phone)) {
-        userPhoneEl.classList.add('error');
-        const el = document.getElementById('phoneError');
-        el.textContent = !phone ? 'Please enter your phone number' : 'Please enter a valid 10-digit number'; el.classList.add('show');
-        hasError = true;
-    }
+    if (!name) { userNameEl.classList.add('error'); const el=document.getElementById('nameError'); el.textContent='Please enter your name'; el.classList.add('show'); hasError=true; }
+    if (!email || !validateEmail(email)) { userEmailEl.classList.add('error'); const el=document.getElementById('emailError'); el.textContent=(!email?'Please enter your email':'Please enter a valid email'); el.classList.add('show'); hasError=true; }
+    if (!phone || !validatePhone(phone)) { userPhoneEl.classList.add('error'); const el=document.getElementById('phoneError'); el.textContent=(!phone?'Please enter your phone number':'Please enter a valid 10-digit number'); el.classList.add('show'); hasError=true; }
     if (hasError) return;
-
     submitBtn.disabled = true;
     submitBtn.innerHTML = `<span class="loading-spinner"></span>Processing...`;
-
     try {
-        const res  = await fetch(REGISTER_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, email, phone })
-        });
+        const res  = await fetch(REGISTER_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({name,email,phone}) });
         const data = await res.json();
-
         if (data.success) {
-            userData = { name, email, phone };
-            localStorage.setItem('suUserRegistered', 'true');
+            userData = {name,email,phone};
+            localStorage.setItem('suUserRegistered','true');
             localStorage.setItem('suUserData', JSON.stringify(userData));
             isRegistered = true;
             registrationOverlay.classList.add('hidden');
-            userInput.disabled = false;
-            sendBtn.disabled = false;
+            userInput.disabled = false; sendBtn.disabled = false;
             userInput.focus();
             setTimeout(() => {
                 addMessage(`Hello ${name}! 👋 Welcome to Sumeru Infrastructures!\n\nI'm your personal property assistant. Ask me about Eastern Arc, Paras Tower, Sumeru Vihar — or anything about apartments, amenities, pricing, and investment! 🏡`, 'bot');
-                localStorage.setItem('suWelcomeShown', 'true');
+                localStorage.setItem('suWelcomeShown','true');
             }, 300);
-        } else {
-            alert(data.error || 'Registration failed. Please try again.');
-        }
-    } catch {
-        alert('Connection error. Please check your internet and try again.');
-    } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Start Chatting 🏡';
-    }
+        } else { alert(data.error || 'Registration failed. Please try again.'); }
+    } catch { alert('Connection error. Please check your internet and try again.'); }
+    finally { submitBtn.disabled=false; submitBtn.textContent='Start Chatting 🏡'; }
 });
 
-userPhoneEl.addEventListener('input', (e) => {
-    e.target.value = e.target.value.replace(/\D/g,'').slice(0,10);
-});
+userPhoneEl.addEventListener('input', (e) => { e.target.value = e.target.value.replace(/\D/g,'').slice(0,10); });
 
 // ══════════════════════════════════════════
 // SEND MESSAGE
@@ -555,29 +706,19 @@ async function sendMessage() {
     scrollToBottom();
 
     try {
-        const res = await fetch(API_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ message })
-        });
+        const res = await fetch(API_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({message}) });
         if (!res.ok) throw new Error('http');
         const data = await res.json();
         typingIndicator.style.display = 'none';
-
         if (data.success && data.reply) {
             addMessage(data.reply, 'bot');
             if (data.requiresCallback) {
                 waitingForCallback = true;
                 pendingQuery = data.userQuery || message;
                 quickReplies.innerHTML = `<button class="back-to-menu-btn show" id="backToMenuBtn">⬅️ Cancel</button>`;
-                document.getElementById('backToMenuBtn').addEventListener('click', () => {
-                    waitingForCallback = false; pendingQuery = '';
-                    resetToMainMenu();
-                });
+                document.getElementById('backToMenuBtn').addEventListener('click', () => { waitingForCallback=false; pendingQuery=''; resetToMainMenu(); });
             }
-        } else {
-            throw new Error('invalid');
-        }
+        } else { throw new Error('invalid'); }
     } catch (err) {
         typingIndicator.style.display = 'none';
         addMessage(String(err).includes('fetch') ? "Unable to connect. Please check your internet and try again." : "Sorry, I encountered an error. Please try again.", 'bot');
@@ -616,14 +757,20 @@ function hideBadge() { setTimeout(() => { const b = document.querySelector('.not
 sendBtn.addEventListener('click', sendMessage);
 userInput.addEventListener('keypress', (e) => { if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();} });
 quickReplies.addEventListener('click', (e) => {
+    if (e.target.classList.contains('roi-trigger-btn')) { openROI(); return; }
     if (e.target.classList.contains('quick-reply-btn')) {
         const r = e.target.getAttribute('data-reply');
         if (r) { userInput.value = r; sendMessage(); }
     }
 });
-document.addEventListener('keydown', (e) => { if(e.key==='Escape'&&chatContainer.classList.contains('active')) chatToggle.click(); });
+document.addEventListener('keydown', (e) => {
+    if (e.key==='Escape') {
+        if (roiModal.classList.contains('active')) { closeROI(); }
+        else if (chatContainer.classList.contains('active')) { chatToggle.click(); }
+    }
+});
 
-console.log('🏢 Sumeru Infrastructures Chatbot ✅');
+console.log('🏢 Sumeru Infrastructures Chatbot + ROI Calculator ✅');
 </script>
 </body>
 </html>
